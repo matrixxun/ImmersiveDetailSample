@@ -1,0 +1,26 @@
+<!--跟toolbar_actionbar.xml唯一的区别在于有阴影 -->
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:theme="@style/ActionBarThemeOverlay"
+    app:popupTheme="@style/ActionBarPopupThemeOverlay"
+    android:id="@+id/toolbar_default"
+    style="@style/AppTheme.Header"
+    app:titleTextAppearance="@style/ActionBar.TitleText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?actionBarSize">
+
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:gravity="left|center_vertical"
+        tools:text="Olá!"/>
+
+</android.support.v7.widget.Toolbar>
+
+
+

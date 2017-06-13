@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ImmersiveDetailSample</string>
+    <string name="action_settings">Settings</string>
+    <string name="immersivedetailsample">ImmersiveDetailSample</string>
+
+    <string name="long_text">A computer virus that tries to avoid detection by making the machine it infects unusable has been found.
+If Rombertik\'s evasion techniques are triggered, it deletes key files on a computer, making it constantly restart.
+Analysts said Rombertik was "unique" among malware samples for resisting capture so aggressively.
+On Windows machines where it goes unnoticed, the malware steals login data and other confidential information.
+Endless loop
+Rombertik typically infected a vulnerable machine after a booby trapped attachment on a phishing message had been opened, security researchers Ben Baker and Alex Chiu, from Cisco, said in a blogpost.
+Some of the messages Rombertik travels with pose as business enquiry letters from Microsoft.
+The malware "indiscriminately" stole data entered by victims on any website, the researchers said.
+And it got even nastier when it spotted someone was trying to understand how it worked.
+"Rombertik is unique in that it actively attempts to destroy the computer if it detects certain attributes associated with malware analysis," the researchers said.
+The malware regularly carries out internal checks to see if it is under analysis.
+If it believes it is, it will attempt to delete an essential Windows system file called the Master Boot Record (MBR).
+It will then restart the machine which, because the MBR is missing, will go into an endless restart loop.
+The code replacing the MBR makes the machine print out a message mocking attempts to analyse it.
+Restoring a PC with its MBR deleted involves reinstalling Windows, which could mean important data is lost.
+Rombertik also uses other tricks to foil analysis.
+One involves writing a byte of data to memory 960 million times to overwhelm analysis tools that try to spot malware by logging system activity.
+Security expert Graham Cluley said destructive viruses such as Rombertik were quite rare.
+"It\'s not the norm," he said.
+"That\'s because malware these days doesn\'t want to draw attention to itself, as that works against its typical goal to lie in wait, stealing information for a long time."
+    A computer virus that tries to avoid detection by making the machine it infects unusable has been found.
+If Rombertik\'s evasion techniques are triggered, it deletes key files on a computer, making it constantly restart.
+Analysts said Rombertik was "unique" among malware samples for resisting capture so aggressively.
+On Windows machines where it goes unnoticed, the malware steals login data and other confidential information.
+Endless loop
+Rombertik typically infected a vulnerable machine after a booby trapped attachment on a phishing message had been opened, security researchers Ben Baker and Alex Chiu, from Cisco, said in a blogpost.
+Some of the messages Rombertik travels with pose as business enquiry letters from Microsoft.
+The malware "indiscriminately" stole data entered by victims on any website, the researchers said.
+And it got even nastier when it spotted someone was trying to understand how it worked.
+"Rombertik is unique in that it actively attempts to destroy the computer if it detects certain attributes associated with malware analysis," the researchers said.
+The malware regularly carries out internal checks to see if it is under analysis.
+If it believes it is, it will attempt to delete an essential Windows system file called the Master Boot Record (MBR).
+It will then restart the machine which, because the MBR is missing, will go into an endless restart loop.
+The code replacing the MBR makes the machine print out a message mocking attempts to analyse it.
+Restoring a PC with its MBR deleted involves reinstalling Windows, which could mean important data is lost.
+Rombertik also uses other tricks to foil analysis.
+One involves writing a byte of data to memory 960 million times to overwhelm analysis tools that try to spot malware by logging system activity.
+Security expert Graham Cluley said destructive viruses such as Rombertik were quite rare.
+"It\'s not the norm," he said.
+"That\'s because malware these days doesn\'t want to draw attention to itself, as that works against its typical goal to lie in wait, stealing information for a long time."</string>
+</resources>
