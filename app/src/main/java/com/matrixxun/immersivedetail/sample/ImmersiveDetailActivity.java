@@ -74,7 +74,7 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
         toolbarTitle.setText("Self-destructing virus kills off PCs");
         toolbarTitle.setVisibility(View.INVISIBLE);
 
-        toolbarColor = getColor(R.color.colorPrimary);
+        toolbarColor = ContextCompat.getColor(this,R.color.colorPrimary);
 
         setToolbarColor(ToolbarState.TOOLBAR_STATE_TRANSPARENT);
         scrollview.setScrollViewListener(this);
@@ -115,7 +115,7 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
 
     public void setToolbarColor(ToolbarState state){
         if(!toolbarState.equals(state)) {
-            toolbar.setBackgroundColor(state.isTransparent() ? getColor(android.R.color.transparent) : toolbarColor);
+            toolbar.setBackgroundColor(state.isTransparent() ? ContextCompat.getColor(this,android.R.color.transparent): toolbarColor);
             toolbarState = state;
         }
 
@@ -190,9 +190,9 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
         if(scrollY-getFlexibleSpace() < toolbar.getHeight() && toolbarState.equals(ToolbarState.TOOLBAR_STATE_TRANSPARENT)){
             float y = Math.min(0, -scrollY + getFlexibleSpace());
             if(y<-1){
-                LollipopCompatSingleton.setStatusBarColorFade(this,getColor(R.color.colorPrimaryDark),300);
+                LollipopCompatSingleton.setStatusBarColorFade(this,ContextCompat.getColor(this,R.color.colorPrimaryDark),300);
             }else if(y==0){
-                LollipopCompatSingleton.setStatusBarColorImmediately(this,getColor(android.R.color.transparent));
+                LollipopCompatSingleton.setStatusBarColorImmediately(this,ContextCompat.getColor(this,android.R.color.transparent));
             }
             toolbar.setTranslationY(y);
         }
