@@ -22,7 +22,7 @@ import static android.util.TypedValue.COMPLEX_UNIT_DIP;
 import static android.util.TypedValue.applyDimension;
 
 /**
- * Created by matrixxun on 2015/12/30.
+ * Created by matrixxun on 2017/6/13.
  */
 public class LollipopCompatSingleton {
 
