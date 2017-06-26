@@ -1,5 +1,5 @@
 # ImmersiveDetailSample
-A sample application show how to realize immersive detail page like Google Play<br>
+A sample application show how to realize immersive parallax effect header like **Google Play** App<br>
 <br>
 ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif)
 
