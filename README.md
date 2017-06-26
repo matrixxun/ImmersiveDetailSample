@@ -3,7 +3,7 @@ A sample application show how to realize immersive parallax effect header like *
 <br>
 ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif)
 
-# Compat
+## Compat
 API level 9+ supported
 
 ## Example
