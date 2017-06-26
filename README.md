@@ -3,8 +3,8 @@ A sample application show how to realize immersive parallax effect header like *
 <br>
 ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif)
 
-# Features
-1. API level 9+ supported
+# Compat
+API level 9+ supported
 
 ## Example
 See example code here on Github. You can also see it live downloading [this apk](https://raw.githubusercontent.com/matrixxun/ImmersiveDetailSample/master/art/app-debug.apk)
