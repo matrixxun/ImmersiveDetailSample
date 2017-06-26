@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.matrixxun.immersivedetail.sample.util.ViewHelper;
 
+/**
+ * Created by matrixxun on 2017/6/19.
+ */
 public class ImmersiveMainActivity extends BaseActivity {
 
     @Override

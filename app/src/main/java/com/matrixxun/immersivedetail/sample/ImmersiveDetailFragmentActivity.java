@@ -2,20 +2,20 @@ package com.matrixxun.immersivedetail.sample;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.matrixxun.immersivedetail.sample.util.LollipopCompatSingleton;
 
-
+/**
+ * Created by matrixxun on 2017/6/19.
+ */
 public class ImmersiveDetailFragmentActivity extends BaseActivity {
     private ImmersiveDetailFragment immersiveDetailFragment;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        Log.d("xdh","Activity-onCreate");
         LollipopCompatSingleton.translucentStatusBar(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_immersive_detail_fragment);
@@ -30,7 +30,6 @@ public class ImmersiveDetailFragmentActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        Log.d("xdh","Activity-onCreateOptionsMenu");
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }

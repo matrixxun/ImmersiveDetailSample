@@ -21,7 +21,7 @@ import com.matrixxun.immersivedetail.sample.R;
 import static android.support.v4.view.ViewPager.OnPageChangeListener;
 
 /**
- * Created by matrixxun on 2017/6/13.
+ * Created by matrixxun on 2017/6/19.
  */
 public class PagerIndicator extends LinearLayout {
 

@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import com.matrixxun.immersivedetail.sample.R;
 import com.matrixxun.immersivedetail.sample.util.ViewHelper;
 
+/**
+ * Created by matrixxun on 2017/6/19.
+ */
 public class BannerPagerAdapter extends PagerAdapter {
         private LayoutInflater mInflater;
         public BannerPagerAdapter(Context context){

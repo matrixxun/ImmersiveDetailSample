@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Created by matrixxun on 2017/6/19.
  */
-
 public class BaseActivity extends AppCompatActivity {
 
     public static  void  startActivity(@NonNull Context context, Class<?> cls, @Nullable Bundle bundle){

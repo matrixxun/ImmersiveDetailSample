@@ -12,10 +12,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -26,6 +23,9 @@ import com.matrixxun.immersivedetail.sample.widget.ObservableScrollView;
 import com.matrixxun.immersivedetail.sample.widget.PagerIndicator;
 
 
+/**
+ * Created by matrixxun on 2017/6/19.
+ */
 public class ImmersiveDetailActivity extends BaseActivity implements ObservableScrollView.ScrollViewListener{
 
     private static final int TOOLBAR_STATE_NORMAL = 0;
@@ -85,36 +85,6 @@ public class ImmersiveDetailActivity extends BaseActivity implements ObservableS
 
         setToolbarColor(TOOLBAR_STATE_TRANSPARENT);
         scrollview.setScrollViewListener(this);
-        scrollview.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_UP){
-                    if(toolbar.getTranslationY() != 0 && (toolbarState == TOOLBAR_STATE_NORMAL) && lastScrollYDirection == 1){ // UP
-                        final AlphaAnimation fadeIn = new AlphaAnimation(1.0f, 0.0f);
-                        fadeIn.setDuration(400);
-                        fadeIn.setAnimationListener(new Animation.AnimationListener() {
-                            @Override
-                            public void onAnimationStart(Animation animation) {
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animation animation) {
-                                toolbar.setVisibility(View.INVISIBLE);
-                                setToolbarColor(TOOLBAR_STATE_TRANSPARENT);
-                                toolbar.setTranslationY(-toolbar.getHeight());
-                                toolbar.setVisibility(View.VISIBLE);
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animation animation) {
-                            }
-                        });
-                        toolbar.startAnimation(fadeIn);
-                    }
-                }
-                return false;
-            }
-        });
     }
 
     public void setToolbarColor(int state) {
