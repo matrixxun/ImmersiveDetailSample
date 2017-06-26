@@ -2,34 +2,32 @@ package com.matrixxun.immersivedetail.sample;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.matrixxun.immersivedetail.sample.adapter.BannerPagerAdapter;
 import com.matrixxun.immersivedetail.sample.util.LollipopCompatSingleton;
+import com.matrixxun.immersivedetail.sample.util.ViewHelper;
 import com.matrixxun.immersivedetail.sample.widget.ObservableScrollView;
 import com.matrixxun.immersivedetail.sample.widget.PagerIndicator;
 
 
-public class ImmersiveDetailActivity extends AppCompatActivity implements ObservableScrollView.ScrollViewListener{
+public class ImmersiveDetailActivity extends BaseActivity implements ObservableScrollView.ScrollViewListener{
 
     private ObservableScrollView scrollview;
     private FrameLayout imageContainer;
@@ -38,6 +36,7 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
     protected ActionBar supportActionBar;
     private ViewPager mViewPager;
     private PagerIndicator mPagerIndicator;
+    private FloatingActionButton fab;
 
     private int toolbarColor;
     private ToolbarState toolbarState = ToolbarState.TOOLBAR_STATE_NORMAL;
@@ -49,16 +48,22 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
         LollipopCompatSingleton.translucentStatusBar(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_immersive_detail_);
-        toolbar = (Toolbar)findViewById(R.id.toolbar_default);
-        toolbarTitle = (TextView)findViewById(R.id.toolbarTitle);
-        scrollview = (ObservableScrollView)findViewById(R.id.scrollview);
-        imageContainer = (FrameLayout)findViewById(R.id.image_container);
-        mViewPager = (ViewPager)findViewById(R.id.bulletpager);
-        mPagerIndicator = (PagerIndicator)findViewById(R.id.view_pager_indicator);
+        toolbar = ViewHelper.$(this,R.id.toolbar_default);
+        toolbarTitle = ViewHelper.$(this,R.id.toolbarTitle);
+        scrollview = ViewHelper.$(this,R.id.scrollview);
+        imageContainer = ViewHelper.$(this,R.id.image_container);
+        mViewPager = ViewHelper.$(this,R.id.bulletpager);
+        mPagerIndicator = ViewHelper.$(this,R.id.view_pager_indicator);
+        fab = ViewHelper.$(this,R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v,"Add wish list success!",Snackbar.LENGTH_LONG).show();
+            }
+        });
 
         BannerPagerAdapter pagerAdapter = new BannerPagerAdapter(this);
         mViewPager.setAdapter(pagerAdapter);
-
         mPagerIndicator.setViewPager(mViewPager);
 
         if(toolbar != null){
@@ -71,7 +76,7 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
         showToolbarTitle(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        toolbarTitle.setText("Self-destructing virus kills off PCs");
+        toolbarTitle.setText("Single Activity");
         toolbarTitle.setVisibility(View.INVISIBLE);
 
         toolbarColor = ContextCompat.getColor(this,R.color.colorPrimary);
@@ -82,9 +87,7 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_UP){
-                    Log.d("xdh","1111");
                     if(toolbar.getTranslationY() != 0 && toolbarState.equals(ToolbarState.TOOLBAR_STATE_NORMAL) && lastScrollYDirection == 1){ // UP
-                        Log.d("xdh","2222");
                         final AlphaAnimation fadeIn = new AlphaAnimation(1.0f, 0.0f);
                         fadeIn.setDuration(400);
                         fadeIn.setAnimationListener(new Animation.AnimationListener() {
@@ -94,7 +97,6 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
-                                Log.d("xdh","3333");
                                 toolbar.setVisibility(View.INVISIBLE);
                                 setToolbarColor(ToolbarState.TOOLBAR_STATE_TRANSPARENT);
                                 toolbar.setTranslationY(-toolbar.getHeight());
@@ -304,53 +306,4 @@ public class ImmersiveDetailActivity extends AppCompatActivity implements Observ
         return super.onOptionsItemSelected(item);
     }
 
-    public class BannerPagerAdapter extends PagerAdapter{
-        private LayoutInflater mInflater;
-        public BannerPagerAdapter(Context context){
-            mInflater = LayoutInflater.from(context);
-        }
-
-        @Override
-        public int getCount() {
-            return 6;
-        }
-
-        @Override
-        public boolean isViewFromObject(View arg0, Object arg1) {
-            return arg0 == arg1;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            View view = mInflater.inflate(R.layout.item_image_viewpager,null);
-            ImageView imageView = (ImageView)view.findViewById(R.id.image);
-            switch(position){
-                case 0:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_0));
-                    break;
-                case 1:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_1));
-                    break;
-                case 2:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_2));
-                    break;
-                case 3:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_3));
-                    break;
-                case 4:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_4));
-                    break;
-                case 5:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_5));
-                    break;
-            }
-            container.addView(view);
-            return view;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView((View)object);
-        }
-    }
 }

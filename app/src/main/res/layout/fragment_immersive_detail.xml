@@ -15,21 +15,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/image_container"
-            android:layout_width="match_parent"
-            android:layout_height="400dp">
-            <android.support.v4.view.ViewPager
-                android:id="@+id/bulletpager"
+            <FrameLayout
+                android:id="@+id/image_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <com.matrixxun.immersivedetail.sample.widget.PagerIndicator
-                android:id="@+id/view_pager_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="16dp"/>
-        </FrameLayout>
+                android:layout_height="400dp">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/bulletpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <com.matrixxun.immersivedetail.sample.widget.PagerIndicator
+                    android:id="@+id/view_pager_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="16dp"/>
+            </FrameLayout>
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab"
                 android:layout_below="@+id/image_container"

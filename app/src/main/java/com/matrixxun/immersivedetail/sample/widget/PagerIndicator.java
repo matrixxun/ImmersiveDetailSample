@@ -240,16 +240,6 @@ public class PagerIndicator extends LinearLayout {
         }
     };
 
-    /**
-     * @deprecated User ViewPager addOnPageChangeListener
-     */
-    @Deprecated public void setOnPageChangeListener(OnPageChangeListener onPageChangeListener) {
-        if (mViewpager == null) {
-            throw new NullPointerException("can not find Viewpager , setViewPager first");
-        }
-        mViewpager.removeOnPageChangeListener(onPageChangeListener);
-        mViewpager.addOnPageChangeListener(onPageChangeListener);
-    }
 
     private void createIndicators() {
         removeAllViews();

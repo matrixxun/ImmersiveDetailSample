@@ -1,7 +1,6 @@
 <android.support.v7.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     app:theme="@style/ActionBarThemeOverlay"
     app:popupTheme="@style/ActionBarPopupThemeOverlay"
     android:id="@+id/toolbar_default"
@@ -16,8 +15,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:textAppearance="?android:textAppearanceMedium"
-        android:gravity="left|center_vertical"
-        tools:text="Olá!"/>
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="left|center_vertical"/>
 
 </android.support.v7.widget.Toolbar>
 
