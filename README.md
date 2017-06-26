@@ -7,7 +7,7 @@ A sample application show how to realize immersive parallax effect header like *
 1. API level 9+ supported
 
 ## Example
-See example code here on Github. You can also see it live downloading [this apk](https://raw.githubusercontent.com/matrixxun/PullToZoomInListView/master/art/app-debug.apk)
+See example code here on Github. You can also see it live downloading [this apk](https://raw.githubusercontent.com/matrixxun/ImmersiveDetailSample/master/art/app-debug.apk)
 
 License
 --------
