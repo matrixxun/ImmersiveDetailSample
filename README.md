@@ -1,7 +1,7 @@
 # ImmersiveDetailSample
 A sample application show how to realize immersive parallax effect header like **Google Play** App<br>
 <br>
-![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif) ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo02.gif)
+![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif) ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo0.gif)
 
 ## Compat
 API level 9+ supported
