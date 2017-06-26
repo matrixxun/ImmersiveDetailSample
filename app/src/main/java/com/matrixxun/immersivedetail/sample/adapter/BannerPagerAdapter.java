@@ -22,7 +22,7 @@ public class BannerPagerAdapter extends PagerAdapter {
 
         @Override
         public int getCount() {
-            return 6;
+            return 8;
         }
 
         @Override
@@ -36,10 +36,10 @@ public class BannerPagerAdapter extends PagerAdapter {
             ImageView imageView = ViewHelper.$(view,R.id.image);
             switch(position){
                 case 0:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_0));
+                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_1));
                     break;
                 case 1:
-                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_1));
+                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_0));
                     break;
                 case 2:
                     imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_2));
@@ -52,6 +52,12 @@ public class BannerPagerAdapter extends PagerAdapter {
                     break;
                 case 5:
                     imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_5));
+                    break;
+                case 6:
+                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_6));
+                    break;
+                case 7:
+                    imageView.setImageDrawable(ContextCompat.getDrawable(view.getContext(),R.drawable.image_7));
                     break;
             }
             container.addView(view);
