@@ -1,6 +1,7 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ImmersiveDetailSample-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/5934)
 # ImmersiveDetailSample
 A sample application show how to realize immersive parallax effect header like **Google Play Store** <br>
+PS: I don't think I can achieve the same effect as PlayStore by using CollapsingToolbarLayout. Anyone has better idea， please tell me 
 <br>
 ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif) ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo01.gif)
 
