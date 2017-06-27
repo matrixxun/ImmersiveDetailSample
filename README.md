@@ -1,3 +1,4 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ImmersiveDetailSample-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/5934)
 # ImmersiveDetailSample
 A sample application show how to realize immersive parallax effect header like **Google Play** App<br>
 <br>
