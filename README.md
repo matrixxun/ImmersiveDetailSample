@@ -4,6 +4,20 @@ A sample application show how to realize immersive parallax effect header like *
 <br>
 ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif) ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo01.gif)
 
+# Feature
+1. Toolbar quick return.
+2. Statusbar&toolbar changes between transparent and solid when gallery visible/invisible.
+3. gallery parallax effect.
+
+# How to use it
+1. Add ObservableScrollView to your layout xml.
+``xml
+
+``
+2. initialize immersive feature.
+``java
+scrollview.setupImmersiveEffect(getActivity(),imageContainer,toolbar,toolbarColor,toolbarTitle);
+``
 ## Compat
 API level 9+ supported
 
