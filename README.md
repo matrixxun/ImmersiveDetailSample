@@ -7,7 +7,7 @@ A sample application show how to realize immersive parallax effect header like *
 # Feature
 1. Toolbar quick return.
 2. Statusbar&toolbar changes between transparent and solid when gallery visible/invisible.
-3. gallery parallax effect.
+3. Gallery parallax effect.
 
 # How to use it
 1. Add ObservableScrollView to your layout xml.
