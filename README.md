@@ -10,7 +10,33 @@ A sample application show how to realize immersive parallax effect header like *
 3. Gallery parallax effect.
 
 # How to use it
-1. Add ObservableScrollView to your layout xml.
+1. Your detail Activty's theme should be:
+res/values/style.xml:
+``` xml
+<style name="AppTheme.NoActionBarTransparentStatusBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+</style>
+```
+and res/values-v21/style.xml:
+``` xml
+<style name="AppTheme.NoActionBarTransparentStatusBar">
+    <item name="windowActionBar">false</item>    
+    <item name="windowNoTitle">true</item>   
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>    
+    <item name="android:statusBarColor">@android:color/transparent</item>
+</style>
+```
+2. add "LollipopCompatSingleton.translucentStatusBa()" and  "LollipopCompatSingleton.getInstance().fitStatusBarTranslucentPadding()" to Activity onCreate() method:
+``` java
+protected void onCreate(Bundle savedInstanceState) {    
+    LollipopCompatSingleton.translucentStatusBar(this);    
+    super.onCreate(savedInstanceState); 
+    setContentView(R.layout.xxxx);
+    ......
+    LollipopCompatSingleton.getInstance().fitStatusBarTranslucentPadding(toolbar, this);
+```
+3. Add ObservableScrollView to your layout xml.
 ``` xml
 <com.matrixxun.immersivedetail.sample.widget.ObservableScrollView        
     android:id="@+id/scrollview"        
@@ -19,7 +45,7 @@ A sample application show how to realize immersive parallax effect header like *
     android:layout_height="match_parent">
     ......
 ```
-2. initialize immersive feature.
+4. initialize immersive feature.
 ``` java
 scrollview.setupImmersiveEffect(getActivity(),imageContainer,toolbar,toolbarColor,toolbarTitle);
 ```
