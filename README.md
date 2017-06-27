@@ -11,6 +11,7 @@ A sample application show how to realize immersive parallax effect header like *
 
 # How to use it
 1. Your detail Activty's theme should be:
+
 res/values/style.xml:
 ``` xml
 <style name="AppTheme.NoActionBarTransparentStatusBar">
@@ -51,7 +52,7 @@ scrollview.setupImmersiveEffect(getActivity(),imageContainer,toolbar,toolbarColo
 ```
 
 ## Compat
-API level 9+ supported
+API level 14+ supported
 
 ## Example
 See example code here on Github. You can also see it live downloading [this apk](https://raw.githubusercontent.com/matrixxun/ImmersiveDetailSample/master/art/app-debug.apk)
