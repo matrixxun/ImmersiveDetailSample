@@ -11,19 +11,18 @@ A sample application show how to realize immersive parallax effect header like *
 
 # How to use it
 1. Add ObservableScrollView to your layout xml.
-``xml
+``` xml
 <com.matrixxun.immersivedetail.sample.widget.ObservableScrollView        
     android:id="@+id/scrollview"        
     android:scrollbars="none"        
     android:layout_width="match_parent"        
     android:layout_height="match_parent">
     ......
-``
+```
 2. initialize immersive feature.
-``java
-
+``` java
 scrollview.setupImmersiveEffect(getActivity(),imageContainer,toolbar,toolbarColor,toolbarTitle);
-``
+```
 
 ## Compat
 API level 9+ supported
