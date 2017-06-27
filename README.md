@@ -2,7 +2,7 @@
 # ImmersiveDetailSample
 A sample application show how to realize immersive parallax effect header like **Google Play Store** <br>
 <br>
-**ps: **I think it is very difficult to achieve the same effect as PlayStore by using CollapsingToolbarLayout. Anyone has better idea， please tell me.
+ps: I think it is very difficult to achieve the same effect as PlayStore by using CollapsingToolbarLayout. Anyone has better idea， please tell me.<br>
 <br>
 ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo.gif) ![](https://github.com/matrixxun/ImmersiveDetailSample/raw/master/art/demo01.gif)
 
