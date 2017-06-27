@@ -40,8 +40,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_height="56dp"
                 android:layout_width="56dp"
-                app:srcCompat="@drawable/ic_favorite_md"
-                app:backgroundTint="@android:color/white"/>
+                app:srcCompat="@drawable/ic_favorite_md"/>
             <TextView
                 android:padding="5dp"
                 android:background="@android:color/white"
