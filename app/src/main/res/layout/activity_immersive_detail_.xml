@@ -1,57 +1,68 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ImmersiveMainActivity">
 
     <com.matrixxun.immersivedetail.sample.widget.ObservableScrollView
         android:id="@+id/scrollview"
-        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/image_container"
-            android:layout_width="match_parent"
-            android:layout_height="400dp">
-            <android.support.v4.view.ViewPager
-                android:id="@+id/bulletpager"
+            <FrameLayout
+                android:id="@+id/image_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <com.matrixxun.immersivedetail.sample.widget.PagerIndicator
-                android:id="@+id/view_pager_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="16dp"/>
-        </FrameLayout>
+                android:layout_height="400dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/bulletpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.matrixxun.immersivedetail.sample.widget.PagerIndicator
+                    android:id="@+id/view_pager_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="16dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:layout_below="@+id/image_container">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:text="@string/long_text" />
+            </FrameLayout>
+
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab"
-                android:layout_below="@+id/image_container"
-                android:layout_marginTop="-28dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_height="56dp"
-                android:layout_width="56dp"
-                app:srcCompat="@drawable/ic_favorite_md"/>
-            <TextView
-                android:padding="5dp"
-                android:background="@android:color/white"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/image_container"
-                android:text="@string/long_text" />
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="@dimen/fab_size_half"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/ic_favorite_md"
+                app:fabSize="normal"/>
         </RelativeLayout>
     </com.matrixxun.immersivedetail.sample.widget.ObservableScrollView>
 
-    <include layout="@layout/toolbar_default"/>
+    <include layout="@layout/toolbar_default" />
 </FrameLayout>
 
 

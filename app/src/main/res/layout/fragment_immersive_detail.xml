@@ -30,17 +30,6 @@
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="16dp"/>
             </FrameLayout>
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_below="@+id/image_container"
-                android:layout_marginTop="-28dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_height="56dp"
-                android:layout_width="56dp"
-                app:srcCompat="@drawable/ic_favorite_md"/>
             <TextView
                 android:padding="5dp"
                 android:background="@android:color/white"
@@ -48,6 +37,18 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/image_container"
                 android:text="@string/long_text" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_below="@+id/image_container"
+                android:layout_marginTop="@dimen/fab_size_half"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="56dp"
+                android:layout_width="56dp"
+                app:srcCompat="@drawable/ic_favorite_md"/>
+
         </RelativeLayout>
     </com.matrixxun.immersivedetail.sample.widget.ObservableScrollView>
 
