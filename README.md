@@ -28,7 +28,7 @@ and res/values-v21/style.xml:
     <item name="android:statusBarColor">@android:color/transparent</item>
 </style>
 ```
-2. add "LollipopCompatSingleton.translucentStatusBa()" and  "LollipopCompatSingleton.getInstance().fitStatusBarTranslucentPadding()" to Activity onCreate() method:
+2. add "LollipopCompatSingleton.translucentStatusBar()" and  "LollipopCompatSingleton.getInstance().fitStatusBarTranslucentPadding()" to Activity onCreate() method:
 ``` java
 protected void onCreate(Bundle savedInstanceState) {    
     LollipopCompatSingleton.translucentStatusBar(this);    
